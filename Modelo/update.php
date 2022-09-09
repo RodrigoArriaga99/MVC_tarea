@@ -1,6 +1,6 @@
 <?php
 
-include("conexion.php");
+include("../Modelo/conexion.php");
 $con=conectar();
 $id=$_POST['idAutor'];
 $Nombre=$_POST['Nombre'];
@@ -10,6 +10,6 @@ $sql="UPDATE autor SET Nombre='$Nombre',Nacionalidad='$Nacionalidad' WHERE idAut
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: banco.php");
+        Header("Location: ../Vista/banco.php");
     }
 ?>

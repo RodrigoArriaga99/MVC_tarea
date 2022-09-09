@@ -1,5 +1,5 @@
 <?php
-    include("conexion.php");
+    include("../Modelo/conexion.php");
     $con=conectar();
 
     $sql="select * from autor";
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-3">
                   <h1>Ingrese Datos</h1>
-                  <form action="insertar.php" method="post">
+                  <form action="../Modelo/insertar.php" method="post">
                       <input type="text" class="form-control mb-3" name="nombre" placeholder="nombre">
                       <input type="text" class="form-control mb-3" name="nacionalidad" placeholder="nacionalidad">
 
@@ -44,8 +44,8 @@
                             <tr>
                                 <th><?php echo $row['Nombre']?></th>
                                 <th><?php echo $row['Nacionalidad']?></th>
-                                <th><a href="actualizar.php?id=<?php echo $row['Nombre'] ?>" class="btn btn-info">Editar</a></th>
-                                <th><a href="borrar.php?id=<?php echo $row['idAutor'] ?>" class="btn btn-danger">Eliminar</a></th> 
+                                <th><a href="../Vista/actualizar.php?id=<?php echo $row['Nombre'] ?>" class="btn btn-info">Editar</a></th>
+                                <th><a href="../Controlador/borrar.php?id=<?php echo $row['idAutor'] ?>" class="btn btn-danger">Eliminar</a></th> 
 
                             </tr>
                             <?php

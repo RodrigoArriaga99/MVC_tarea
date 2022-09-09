@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("../Modelo/conexion.php");
 $con=conectar();
 
 $nombre=$_POST['nombre'];
@@ -10,7 +10,7 @@ $sql="INSERT INTO autor VALUES(default,'$nombre','$nacionalidad')";
 $query= mysqli_query($con,$sql);
 
 if($query){
-    Header("Location: banco.php");
+    Header("Location: ../Vista/banco.php");
     
 }else {
 }
